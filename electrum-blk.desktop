@@ -1,0 +1,22 @@
+# If you want Electrum to appear in a Linux app launcher ("start menu"), install this by doing:
+# sudo desktop-file-install electrum-pnd.desktop
+
+[Desktop Entry]
+Comment=Lightweight Pandacoin Client
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\"; electrum-pnd %u"
+GenericName[en_US]=Pandacoin Wallet
+GenericName=Pandacoin Wallet
+Icon=electrum
+Name[en_US]=Electrum Pandacoin Wallet
+Name=Electrum Pandacoin Wallet
+Categories=Finance;Network;
+StartupNotify=true
+StartupWMClass=electrum-pnd
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/blackcoin;
+Actions=Testnet;
+
+[Desktop Action Testnet]
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\"; electrum-pnd --testnet %u"
+Name=Testnet mode
